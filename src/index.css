@@ -1,0 +1,6 @@
+#root {
+    padding: 1rem 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

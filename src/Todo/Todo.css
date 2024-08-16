@@ -1,0 +1,11 @@
+.item {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    max-width: 30rem;
+    align-items: center;
+    width: 100%;
+}
+.todo-name.active {
+    text-decoration: line-through;
+}

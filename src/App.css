@@ -1,0 +1,97 @@
+.todo-icon {
+    max-width: 2rem;
+}
+button {
+    transition: all .5s;
+}
+.todo-head {
+    display: flex;
+    gap: 1rem;
+}
+.bold {
+    font-weight: bold;
+}
+.fs-96 {
+    font-size: calc(2.2222222222em + min(56 * ((100vw - 375px) / 1545), 56px));
+}
+
+.fs-72 {
+    font-size: calc(2em + min(36 * ((100vw - 375px) / 1545), 36px));
+}
+
+.fs-64 {
+    font-size: calc(1.7777777778em + min(32 * ((100vw - 375px) / 1545), 32px));
+}
+
+.fs-48 {
+    font-size: calc(1.6666666667em + min(18 * ((100vw - 375px) / 1545), 18px));
+}
+
+.fs-40 {
+    font-size: calc(1.5555555556em + min(12 * ((100vw - 375px) / 1545), 12px));
+}
+
+.fs-36 {
+    font-size: calc(1.4444444444em + min(10 * ((100vw - 375px) / 1545), 10px));
+}
+
+.fs-32 {
+    font-size: calc(1.3333333333em + min(8 * ((100vw - 375px) / 1545), 8px));
+}
+
+.fs-30 {
+    font-size: calc(1.3333333333em + min(6 * ((100vw - 375px) / 1545), 6px));
+}
+
+.fs-28 {
+    font-size: calc(1.3333333333em + min(4 * ((100vw - 375px) / 1545), 4px));
+}
+
+.fs-24 {
+    font-size: calc(1.1111111111em + min(4 * ((100vw - 375px) / 1545), 4px));
+}
+
+.fs-20 {
+    font-size: calc(1em + min(2 * ((100vw - 375px) / 1545), 2px));
+}
+
+.fs-18 {
+    font-size: calc(0.8888888889em + min(2 * ((100vw - 375px) / 1545), 2px));
+}
+
+.fs-16 {
+    font-size: calc(0.7777777778em + min(2 * ((100vw - 375px) / 1545), 2px));
+}
+
+.fs-14 {
+    font-size: calc(0.6666666667em + min(2 * ((100vw - 375px) / 1545), 2px));
+}
+
+.fs-12 {
+    font-size: calc(0.5555555556em + min(2 * ((100vw - 375px) / 1545), 2px));
+}
+
+.button, .input {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 1.625rem;
+}
+.button {
+    background-color: #f76206;
+    color: #fff;
+    margin-left: -3rem;
+    cursor: pointer;
+}
+.button:hover {
+    color: #000;
+    background-color:#19A68C;
+}
+.input {
+    background-color: #e6e7eb;
+    width: 100%;
+    max-width: 15rem;
+}
+.input:active {
+    border: none;
+    outline: none;
+}
