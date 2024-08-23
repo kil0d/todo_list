@@ -1,28 +1,26 @@
 import  './Todo.css'
 import {Checkbox} from "@mui/material";
+import {ChangeEventHandler, MouseEventHandler} from "react";
+import {TrashIcon} from "../assets/TrashIcon.tsx";
 
-export const Todo = ({taskName, handleDelete} : any) => {
-    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-    const todoFinished = (e: any) => {
-        const item = e.target.closest('.item');
-        const todoName = item.children[1];
-        if(e.target.checked) {
-            todoName.className+= ' active'
-        }
-        else {
-            todoName.classList.remove('active')
-        }
+export const Todo = ({todo, onDelete} : any) => {
+    const handleDelete:MouseEventHandler<HTMLButtonElement> = (e) => {
+        e.stopPropagation()
+        onDelete()
+    }
+    const handleChangeDone: ChangeEventHandler<HTMLInputElement> = (e) => {
+        console.log(todo.isDone)
+        todo.isDone = e.target.checked
+    }
+    const handleChangeTaskName: ChangeEventHandler<HTMLInputElement> = (e) => {
+        todo.taskName = e.target.value
+
     }
     return (
-        <label className="item">
-            <Checkbox  className="checkbox" onClick={(e)=> {todoFinished(e)}} {...label}  color="success" />
-            <div className="todo-name fs-24 bold">{taskName}</div>
-            <div onClick={handleDelete} className="delete">
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16">
-                    <path fillRule="evenodd"
-                          d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/>
-                </svg>
-            </div>
-        </label>
+        <div className="item">
+            <Checkbox id={todo.id} checked={todo.isDone}  className="checkbox" onChange={handleChangeDone} inputProps={{'aria-label': 'Checkbox demo' }} color="success" />
+            <input onChange={handleChangeTaskName} className="todo-name fs-24 bold" value={todo.taskName}/>
+            <button onClick={handleDelete} className="delete"><TrashIcon/></button>
+        </div>
     )
 }
