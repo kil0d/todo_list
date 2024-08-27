@@ -6,6 +6,14 @@
     align-items: center;
     width: 100%;
 }
+.todo-name {
+    border: none;
+}
 .todo-name.active {
     text-decoration: line-through;
+}
+.delete {
+    cursor: pointer;
+    background: transparent;
+    border: none;
 }
